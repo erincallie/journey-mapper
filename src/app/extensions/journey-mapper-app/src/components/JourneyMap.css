@@ -1,0 +1,55 @@
+.journey-map {
+  margin: 30px 0;
+}
+
+.journey-map-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.journey-map-stage {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  border: 1px solid #cbd6e2;
+  border-radius: 5px;
+  background-color: #f5f8fa;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.journey-map-stage:hover {
+  background-color: #eaeef2;
+  transform: translateY(-2px);
+}
+
+.journey-map-stage-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ff7a59;
+  color: white;
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.journey-map-stage-content {
+  flex: 1;
+}
+
+.journey-map-stage-content h3 {
+  margin: 0 0 5px 0;
+  color: #33475b;
+  font-size: 16px;
+}
+
+.journey-map-stage-content p {
+  margin: 0;
+  color: #516f90;
+  font-size: 14px;
+}

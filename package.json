@@ -1,0 +1,21 @@
+{
+  "name": "journey-mapper",
+  "version": "0.1.0",
+  "description": "HubSpot UI Extension with React App in iFrame Modal",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx hs project dev",
+    "build": "npx hs project build",
+    "upload": "npx hs project upload",
+    "clean": "rimraf dist",
+    "install-journey-mapper-app": "cd src/app/extensions/journey-mapper-app && npm install",
+    "install-journey-mapper-ui-extension": "cd src/app/extensions/journey-mapper-ui-extension && npm install",
+    "postinstall": "npm run install-journey-mapper-app && npm run install-journey-mapper-ui-extension"
+  },
+  "author": "Erin Wiggers",
+  "license": "ISC",
+  "dependencies": {
+    "@hubspot/cli": "^4.0.1",
+    "rimraf": "^3.0.2"
+  }
+}

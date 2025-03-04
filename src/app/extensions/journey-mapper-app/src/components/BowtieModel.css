@@ -1,0 +1,171 @@
+.bowtie-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 30px 0;
+}
+
+.bowtie {
+  --clr-illustrations: #555970;
+  --clr-bg: #ffffff;
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --corner-s: 3px;
+  position: relative;
+  width: 100%;
+  min-width: 800px;
+  max-width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.bowtie .flex {
+  display: flex;
+}
+
+.bowtie .middle {
+  align-items: center;
+}
+
+.bowtie .shapes {
+  gap: 1%;
+  height: 100%;
+  justify-content: center;
+}
+
+.bowtie .trap {
+  position: relative;
+  width: 16.6%;
+  display: grid;
+  grid-template-areas: 'stack';
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.bowtie .trap:hover {
+  transform: translate(0px, -55px) scale(1.02) !important;
+}
+
+/* Highlighted trap styles for contact's current stage */
+.bowtie .trap.highlighted svg.front path {
+  stroke: #000;
+  stroke-width: 2px;
+  stroke-dasharray: 5, 3;
+}
+
+/* Contact indicator styles */
+.bowtie .contact-indicator {
+  position: absolute;
+  z-index: 5;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bowtie .contact-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ff7a59;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Make connector labels more visible */
+.bowtie .trap .connector .circle .connector-label {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 3px 6px;
+}
+
+.bowtie .trap > * {
+  grid-area: stack;
+}
+
+.bowtie .trap svg {
+  width: 100%;
+  height: auto;
+}
+
+.bowtie .shape-label {
+  display: grid;
+  place-items: center;
+  color: var(--clr-primary); 
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: clamp(0.5rem, 0.25rem + 1vw, 1rem);
+}
+
+.bowtie .shape-label {
+  z-index: 3;
+}
+
+.bowtie svg.front {
+  z-index: 2;
+}
+
+.bowtie svg.back {
+  z-index: 1;
+}
+
+.bowtie svg.back {
+  will-change: filter;
+  transition: all 100ms ease;
+  --shadow: drop-shadow( 0px 0px 12px rgb(from var(--clr-primary) r g b / 0.0));
+  -webkit-filter: var(--shadow);
+  filter: var(--shadow);
+}
+
+.bowtie .active svg.back {
+  --shadow: drop-shadow( 0px 0px 12px rgb(from var(--clr-primary) r g b / 0.3));
+}
+
+.bowtie .trap .connector {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.4rem, 0.2rem + .8vw, .8rem);
+  z-index: 4;
+}
+
+.bowtie .trap .connector .line {
+  height: 50px;
+  border-left: 1px dashed var(--clr-primary);
+  transition: transform 0.3s ease;
+}
+
+.bowtie .trap .connector .circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background-color: var(--clr-primary);
+  position: relative;
+  gap: 2px;
+  transition: transform 0.3s ease;
+}
+
+.bowtie .trap .connector .circle .connector-label {
+  position: absolute;
+  border: 1px solid var(--clr-primary);
+  border-radius: var(--corner-s);
+  color: var(--clr-primary);
+  padding: 2px 4px;
+  font-weight: 600;
+  translate: 10% -27%;
+  background-color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+}
+
+/* Animation transitions */
+.bowtie .trap svg.front path,
+.bowtie .trap svg.back path,
+.bowtie .trap .connector .circle,
+.bowtie .trap .connector .line,
+.bowtie .trap .shape-label {
+  transition: all 0.3s ease;
+}

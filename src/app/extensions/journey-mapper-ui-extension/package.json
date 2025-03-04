@@ -1,0 +1,16 @@
+{
+  "name": "journey-mapper-ui-extension",
+  "version": "0.1.0",
+  "description": "HubSpot UI Extension for Journey Mapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hubspot/ui-extensions": "^0.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

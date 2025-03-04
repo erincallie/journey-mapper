@@ -1,0 +1,15 @@
+{
+  "name": "Journey Mapper",
+  "uid": "journey-mapper",
+  "description": "A visual customer journey mapper for HubSpot that uses the Bowtie model and OpenAI mapping.",
+  "allowedUrls": ["https://api.hubapi.com"],
+  "auth": {
+    "redirectUrls": ["http://localhost:3000/oauth-callback"],
+    "requiredScopes": [
+      "crm.objects.contacts.read",
+      "crm.objects.contacts.write"
+    ],
+    "optionalScopes": [],
+    "conditionallyRequiredScopes": []
+  }
+}

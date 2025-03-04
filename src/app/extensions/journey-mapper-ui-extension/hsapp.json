@@ -1,0 +1,17 @@
+{
+  "type": "crm-card",
+  "data": {
+    "title": "Journey Mapper",
+    "uid": "journey_mapper_card",
+    "location": "crm.record.tab",
+    "module": {
+      "file": "App.jsx"
+    },
+    "objectTypes": [{ "name": "contacts" }],
+    "extensions": {
+      "crm": {
+        "cards": []
+      }
+    }
+  }
+}

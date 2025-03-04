@@ -1,0 +1,43 @@
+.journey-stage-editor {
+  padding: 10px 0;
+}
+
+.action-input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-small {
+  padding: 8px 12px;
+}
+
+.action-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.action-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  background-color: #f5f8fa;
+  border-radius: 3px;
+  border: 1px solid #cbd6e2;
+}
+
+.btn-remove {
+  background: none;
+  border: none;
+  color: #ff5449;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.btn-remove:hover {
+  color: #ff6c63;
+}
